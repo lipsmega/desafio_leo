@@ -18,5 +18,10 @@ if (class_exists($class))
     {
         $page->$method( $_REQUEST );
     }
-    $page->show();
+
+    $html = $page->show();
+
+    $layout = file_get_contents('template/layout.html');
+
+    print $layout;
 }

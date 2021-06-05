@@ -40,9 +40,7 @@ class CursoList
         try
         {
 
-            $initial = $param['initial'];
-
-            $cursos = Curso::all($initial);
+            $cursos = Curso::all();
             
             $items = '';
             foreach ($cursos as $curso)
@@ -71,6 +69,6 @@ class CursoList
     public function show()
     {
         $this->load();
-        print $this->html;
+        return $this->html;
     }
 }
