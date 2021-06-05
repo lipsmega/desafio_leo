@@ -23,5 +23,7 @@ if (class_exists($class))
 
     $layout = file_get_contents('template/layout.html');
 
-    print $layout;
+    $content = str_replace('{content}', $html, $layout);
+
+    print $content;
 }

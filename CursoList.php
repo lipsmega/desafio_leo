@@ -12,7 +12,8 @@ class CursoList
      */
     public function __construct()
     {
-        $this->html = file_get_contents('html/list.html');
+        
+        $this->html = file_get_contents('html/item.html');
         
     }
     
@@ -45,17 +46,19 @@ class CursoList
             $items = '';
             foreach ($cursos as $curso)
             {  
-                $item = file_get_contents('html/item.html');
+
+                $item = $this->html;
+
                 $item = str_replace( '{id}',    $curso['id'], $item);
                 $item = str_replace( '{titulo}',    $curso['titulo'], $item);
                 $item = str_replace( '{descricao}',    $curso['descricao'], $item);
                 $item = str_replace( '{imagem}',    $curso['imagem'], $item);
                 $item = str_replace( '{link}',    $curso['link'], $item);
                 
-                
                 $items .= $item;
             }
-            $this->html = str_replace('{items}', $items, $this->html);
+            
+            $this->html = "<div class=\"row\">".$items."</div>";
         }
         catch (Exception $e)
         {
