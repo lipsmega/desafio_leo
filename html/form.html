@@ -1,37 +1,39 @@
 <div class="col-12">
   <h4 class="mb-3">Cadastro de curso</h4>
-  <form class="needs-validation" novalidate="">
+  <form enctype="multipart/form-data" method="post" action="index.php?class=CursoForm&method=save">
     <div class="row">
+    <div class="col-md-6 mb-3">
+        <label>Id</label>
+        <input name="id" type="text" readonly="1" class="form-control" placeholder="" value="" required="">
+        
+      </div>
+    </div>
+    <div class="row">
+      
       <div class="col-md-6 mb-3">
-        <label for="firstName">Titulo</label>
-        <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-        <div class="invalid-feedback">
-          Valid first name is required.
-        </div>
+        <label>Titulo</label>
+        <input name="titulo" type="text" class="form-control" placeholder="" value="" required="">
+        
       </div>
       <div class="col-md-6 mb-3">
-        <label for="lastName">Descrição</label>
-        <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-        <div class="invalid-feedback">
-          Valid last name is required.
-        </div>
+        <label>Descrição</label>
+        <input name="descricao" type="text" class="form-control" placeholder="" value="" required="">
+        
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 mb-3">
-        <label for="firstName">Imagem</label>
-        <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-        <div class="invalid-feedback">
-          Valid first name is required.
-        </div>
+        <label>Imagem</label>
+        <input name="imagem" type="text" class="form-control" placeholder="" value="" required="">
+        
       </div>
       <div class="col-md-6 mb-3">
-        <label for="lastName">Link</label>
-        <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+        <label>Link</label>
+        <input name="link" type="text" class="form-control" placeholder="" value="" required="">
       </div>
     </div>
          
   <hr class="mb-4">
-    <button class="btn btn-primary btn-lg btn-block" type="submit">Salvar</button>
+    <button class="btn btn-primary my-2" onclick="window.location='index.php?class=CursoList'">Salvar</button>
   </form>
 </div>
