@@ -44,6 +44,10 @@ class CursoList
             $cursos = Curso::all();
             
             $items = '';
+            $banner_novo = "<div class=\"banner-container\">
+        <div class=\"banner\">Novo</div>
+    </div>";
+
             foreach ($cursos as $curso)
             {  
 
@@ -54,6 +58,7 @@ class CursoList
                 $item = str_replace( '{descricao}',    $curso['descricao'], $item);
                 $item = str_replace( '{imagem}',    $curso['imagem'], $item);
                 $item = str_replace( '{link}',    $curso['link'], $item);
+                $item = str_replace( '{banner_novo}',    $banner_novo, $item);
                 
                 $items .= $item;
             }

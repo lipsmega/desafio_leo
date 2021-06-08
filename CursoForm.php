@@ -20,7 +20,8 @@ class CursoForm
                         'titulo'      => null,
                         'descricao'      => null,
                         'imagem'      => null,
-                        'link'  => null];  
+                        'link'      => null,
+                        'data_reg'  => null];  
         
     }
     
