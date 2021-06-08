@@ -1,14 +1,15 @@
-<div class="col-md-4">
-  <div class="card mb-4 box-shadow">
+<div class="col-md-3">
+  <div class="card mb-3 box-shadow">
   	{banner_novo}
-    <img class="card-img-top" src="{imagem}" alt="{titulo}">
+    <img class="card-img-top" src="uploads/{imagem}" alt="{titulo}">
     <div class="card-body">
       <h3>{titulo}</h3>
-      <p class="card-text">{descricao} &middot <a href="index.php?class=CursoForm&method=edit&id={id}">Editar</a></p>
+      <p class="card-text">{descricao}</p>
       <br>
     
   	  <div class="d-grid gap-2">
-		  <button class="btn btn-success" style="border-radius: 20px;" type="button">VER CURSO</button>
+		 
+		  <a class="btn btn-success" style="border-radius: 20px;" href="index.php?class=CursoForm&method=edit&id={id}" role="button">VER CURSO</a>
 		  
 	  </div>
 

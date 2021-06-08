@@ -48,6 +48,19 @@ class CursoForm
     {
         try
         {
+           
+
+            if(isset($_FILES['imagem']['name']) && $_FILES['imagem']['name'])
+            {
+
+                $filename = $_FILES['imagem']['name'];
+
+                move_uploaded_file($_FILES['imagem']['tmp_name'], "uploads/".$filename);
+
+                $param['imagem'] = $filename;
+            }
+
+
             Curso::save($param);
             $this->data = $param;
             print "Record saved";
