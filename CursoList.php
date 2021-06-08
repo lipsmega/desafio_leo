@@ -62,6 +62,8 @@ class CursoList
                 
                 $items .= $item;
             }
+
+            $items .= file_get_contents('html/adicionar_curso_item.html');
             
             $this->html = "<div class=\"row\">".$items."</div>";
         }
